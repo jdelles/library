@@ -8,21 +8,26 @@ From [The Odin Project](https://www.theodinproject.com)
 ## Introduction
 This is the first project in the JavaScript track at The Odin Project. It uses Object Oriented Programming to create 'book' objects and stores them in a library which can return various information about the books to the user. 
 
-## Skill to be demonstrated
+## Skill
 - JavaScript
 - CSS
 - HTML
 - Firebase DB 
 
-## Tools used
+## Tools
 - VSCode
 - Live Server
 - Git / GitHub
 
+## Resources
+- [MDN Web Docs - Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Firebase - Getting started with Firebase Realtime Database](https://www.youtube.com/watch?v=noB98K6A0TY)
+
+
 ## To do 
 - [X] If you haven’t already, set up your project with skeleton HTML/CSS and JS files.
-- [ ] Create book object and constructor
-- [ ] Create library array to hold books and add book to library
+- [X] Create book object and constructor
+- [X] Create library array to hold books and add book to library
 - [ ] Write a function that loops through the array and displays each book on the page. You can display them in some sort of table, or each on their own “card”. 
 - [ ] Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want.
 - [ ] Add a button on each book’s display to remove the book from the library.
