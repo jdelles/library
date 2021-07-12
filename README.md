@@ -36,3 +36,6 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 - [ ] (Optional) Firebase
 - [ ] Style points - make books display as table or as cards 
 - [ ] Publish to GitHub
+
+## log
+7/12/2021 Created a bug with the display() function. Every time it ran, the library display was duplicated. Solutions I considered were: 1. Delete the display every time it refreshes since the library array was not duplicating only the display. 2. Find a way to update the list 1 at a time instead of using forEach to grab everything from the library. I went with option 2 and built a table directly into my index.html and then used JavaScript to insertRow() to add the new book. 
