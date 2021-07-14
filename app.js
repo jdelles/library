@@ -61,8 +61,8 @@ function addBookToLibrary(title, author, pages, read) {
  * Removes a book from the library and updates the display table to remove the book
  * @param {*} book the Book object to remove
  */
-function removeBookFromLibrary(book) {
-    myLibrary.splice(myLibrary.findIndex(book), 1); 
+function removeBookFromLibrary(id) {
+    myLibrary.splice(id, 1); 
     size--; 
     libraryDisplay(); 
 }
@@ -74,7 +74,9 @@ function libraryDisplay() {
     const tbody = document.querySelector('tbody'); 
     tbody.innerHTML = ""; 
     myLibrary.forEach(book => {
+        const index = myLibrary.indexOf(book); 
         const row = document.createElement('tr'); 
+        row.setAttribute("id", index); 
 
         const tdTitle = document.createElement('td'); 
         tdTitle.textContent = book.title; 
@@ -88,10 +90,19 @@ function libraryDisplay() {
         const tdRead = document.createElement('td'); 
         tdRead.textContent = book.read; 
 
+        const tdRemove = document.createElement('td'); 
+        const removeButton = document.createElement('button'); 
+        removeButton.textContent = "Delete"; 
+        removeButton.addEventListener('click', () => {
+            removeBookFromLibrary(index);
+        }); 
+        tdRemove.appendChild(removeButton); 
+
         row.appendChild(tdTitle); 
         row.appendChild(tdAuthor); 
         row.appendChild(tdPages); 
         row.appendChild(tdRead); 
+        row.appendChild(tdRemove); 
         
         tbody.appendChild(row); 
     }); 
