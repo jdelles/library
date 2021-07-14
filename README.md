@@ -34,7 +34,7 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 - [X] Add a button on each book’s display to change its read status.
 - [X] (Optional) localStorage - Set up a function that saves the whole library array to localStorage every time a new book is created, and another function that looks for that array in localStorage when your app is first loaded. 
 - [ ] (Optional) Firebase
-- [ ] Style points - make books display as cards 
+- [ ] Style points - make prettier
 - [X] Publish to GitHub
 
 ## log
@@ -45,3 +45,5 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 7/13/2021 Rethinking my decisions yesterday and playing with embedding the form directly into the html. 
 
 7/13/2021 Got the display working! Got the toggle working to display/hide the new book form
+
+7/14/2021 Finished the requirements of the library project. Like my other project submissions, the design elements could use work. I will revisit them after getting through React and Node units. 
