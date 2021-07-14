@@ -31,11 +31,11 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 - [X] Write a function that loops through the array and displays each book on the page. You can display them in some sort of table, or each on their own “card”. 
 - [X] Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want.
 - [X] Add a button on each book’s display to remove the book from the library.
-- [ ] Add a button on each book’s display to change its read status.
+- [X] Add a button on each book’s display to change its read status.
 - [ ] (Optional) localStorage - Set up a function that saves the whole library array to localStorage every time a new book is created, and another function that looks for that array in localStorage when your app is first loaded. 
 - [ ] (Optional) Firebase
-- [ ] Style points - make books display as table or as cards 
-- [ ] Publish to GitHub
+- [ ] Style points - make books display as cards 
+- [X] Publish to GitHub
 
 ## log
 7/12/2021 - Created a bug with the display() function. Every time it ran, the library display was duplicated. Solutions I considered were: 1. Delete the display every time it refreshes since the library array was not duplicating only the display. 2. Find a way to update the list 1 at a time instead of using forEach to grab everything from the library. I went with option 2 and built a table directly into my index.html and then used JavaScript to insertRow() to add the new book. 
