@@ -15,19 +15,33 @@
     <main>
         <section id="display">
             <table>
-                <tr>
-                    <td>Title</td>
-                    <td>Author</td>
-                    <td>Pages</td>
-                    <td>Read</td>
-                </tr>
+                <thead>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                </thead>
+                <tbody>
+
+                </tbody>
             </table>
         </section>
         <section id="buttons">
             <button id="newBook">New Book</button>
         </section>
-        <section id="form">
-
+        <section>
+            <form id="form" action="/app.js"> 
+                <input type="text" id="title" name="title" placeholder="The Hobbit" required>
+                <input type="text" id="author" name="author" placeholder="J.R.R. Tolkien" required>
+                <input type="text" id="pages" name="pages" placeholder="304" required>
+                <select id="read" name="read" class="form-item" required>
+                    <option disabled selected value>Select status</option>
+                    <option value="Have read">Have Read</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Want to read">Want To Read</option>
+                </select>
+                <button id="submit" type="submit" form="form">Submit</button>
+            </form>
         </section>
     </main>
     <footer>

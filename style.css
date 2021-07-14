@@ -49,15 +49,15 @@ tr {
     color: var(--color-black); 
 }
 
-td {
-    border: 1px solid var(--color-brown);
-    padding: 3px; 
-}
-
-tr:first-child {
+th {
     font-size: 20px;
 }
 
-tr:not(:first-child) {
+tr {
     font-size: 15px; 
+}
+
+td {
+    border: 1px solid var(--color-brown);
+    padding: 3px; 
 }
