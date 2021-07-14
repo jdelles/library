@@ -88,7 +88,17 @@ function libraryDisplay() {
         tdPages.textContent = book.pages; 
 
         const tdRead = document.createElement('td'); 
-        tdRead.textContent = book.read; 
+        const readButton = document.createElement('button'); 
+        readButton.textContent = book.read; 
+        readButton.addEventListener('click', () => {
+            if (book.read === "Read") {
+                book.read = "Not Read";
+            } else {
+                book.read = "Read";  
+            }
+            libraryDisplay(); 
+        }); 
+        tdRead.appendChild(readButton); 
 
         const tdRemove = document.createElement('td'); 
         const removeButton = document.createElement('button'); 
