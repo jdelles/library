@@ -32,7 +32,7 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 - [X] Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want.
 - [X] Add a button on each book’s display to remove the book from the library.
 - [X] Add a button on each book’s display to change its read status.
-- [ ] (Optional) localStorage - Set up a function that saves the whole library array to localStorage every time a new book is created, and another function that looks for that array in localStorage when your app is first loaded. 
+- [X] (Optional) localStorage - Set up a function that saves the whole library array to localStorage every time a new book is created, and another function that looks for that array in localStorage when your app is first loaded. 
 - [ ] (Optional) Firebase
 - [ ] Style points - make books display as cards 
 - [X] Publish to GitHub
