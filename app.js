@@ -102,7 +102,8 @@ newBook.addEventListener('click', () => {
     formSection.style.display = "block";  
 });
 
-form.addEventListener("submit", () => {
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
     const title = document.querySelector("#title").value;
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
