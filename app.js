@@ -102,11 +102,11 @@ newBook.addEventListener('click', () => {
     formSection.style.display = "block";  
 });
 
-form.addEventListener("submit", (i) => {
-    const title = document.getElementById("title").nodeValue; 
-    const author = document.getElementById("author").nodeValue; 
-    const pages = document.getElementById("pages").nodeValue; 
-    const read = document.getElementById("read").nodeValue; 
+form.addEventListener("submit", () => {
+    const title = document.querySelector("#title").value;
+    const author = document.querySelector("#author").value;
+    const pages = document.querySelector("#pages").value;
+    const read = document.querySelector("#read").value;
 
     addBookToLibrary(title, author, pages, read); 
 }); 
