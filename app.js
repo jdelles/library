@@ -99,7 +99,11 @@ function libraryDisplay() {
 
 newBook.addEventListener('click', () => {
     const formSection = document.querySelector('#form'); 
-    formSection.style.display = "block";  
+    if (formSection.style.display === 'none') {
+        formSection.style.display = 'block'; 
+    } else {
+        formSection.style.display = 'none'; 
+    }
 });
 
 form.addEventListener("submit", (e) => {
@@ -110,4 +114,6 @@ form.addEventListener("submit", (e) => {
     const read = document.querySelector("#read").value;
 
     addBookToLibrary(title, author, pages, read); 
+    const formSection = document.querySelector('#form'); 
+    formSection.style.display = 'none'; 
 }); 

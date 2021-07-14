@@ -28,8 +28,8 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 - [X] If you haven’t already, set up your project with skeleton HTML/CSS and JS files.
 - [X] Create book object and constructor
 - [X] Create library array to hold books and add book to library
-- [ ] Write a function that loops through the array and displays each book on the page. You can display them in some sort of table, or each on their own “card”. 
-- [ ] Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want.
+- [X] Write a function that loops through the array and displays each book on the page. You can display them in some sort of table, or each on their own “card”. 
+- [X] Add a “NEW BOOK” button that brings up a form allowing users to input the details for the new book: author, title, number of pages, whether it’s been read and anything else you might want.
 - [ ] Add a button on each book’s display to remove the book from the library.
 - [ ] Add a button on each book’s display to change its read status.
 - [ ] (Optional) localStorage - Set up a function that saves the whole library array to localStorage every time a new book is created, and another function that looks for that array in localStorage when your app is first loaded. 
@@ -43,3 +43,5 @@ This is the first project in the JavaScript track at The Odin Project. It uses O
 7/12/2021 Part 2 - Created an New Book button and built a form with JavaScript that appears on click. Submitting the form is broken and seems to just reset the webpage though its not throwing any errors. I'll get back to debuggin this tomrorow. 
 
 7/13/2021 Rethinking my decisions yesterday and playing with embedding the form directly into the html. 
+
+7/13/2021 Got the display working! Got the toggle working to display/hide the new book form
