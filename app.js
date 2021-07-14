@@ -121,27 +121,6 @@ function libraryDisplay() {
     }); 
 }
 
-newBook.addEventListener('click', () => {
-    const formSection = document.querySelector('#form'); 
-    if (formSection.style.display === 'none') {
-        formSection.style.display = 'block'; 
-    } else {
-        formSection.style.display = 'none'; 
-    }
-});
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); 
-    const title = document.querySelector("#title").value;
-    const author = document.querySelector("#author").value;
-    const pages = document.querySelector("#pages").value;
-    const read = document.querySelector("#read").value;
-
-    addBookToLibrary(title, author, pages, read); 
-    const formSection = document.querySelector('#form'); 
-    formSection.style.display = 'none'; 
-}); 
-
 /**
  * Tests whether storage is supported by the user's browser
  * Source: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
@@ -191,4 +170,39 @@ function load() {
     }
 }
 
+/**
+ * Adds an event listener to the new book button which toggles the form display
+ */
+newBook.addEventListener('click', () => {
+    const formSection = document.querySelector('#form'); 
+    if (formSection.style.display === 'none') {
+        formSection.style.display = 'block'; 
+    } else {
+        formSection.style.display = 'none'; 
+    }
+});
+
+/**
+ * Adds an event listener to the submit button which overrides the default submit
+ * behavior and instead captures the form data and calls addBookToLibrary
+ */
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    const title = document.querySelector("#title").value;
+    document.querySelector("#title").value = ""; 
+    const author = document.querySelector("#author").value;
+    document.querySelector("#author").value = ""; 
+    const pages = document.querySelector("#pages").value;
+    document.querySelector("#pages").value = ""; 
+    const read = document.querySelector("#read").value;
+    document.querySelector("#read").value = ""; 
+
+    addBookToLibrary(title, author, pages, read); 
+    const formSection = document.querySelector('#form'); 
+    formSection.style.display = 'none'; 
+}); 
+
+/**
+ * Checks localStorage for data from a previous session
+ */
 load(); 
