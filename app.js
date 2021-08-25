@@ -65,11 +65,10 @@ function removeBookFromLibrary(id) {
   if (size >= 0) {
     myLibrary.splice(id, 1);
     size--;
-    save();
   } else if (size === -1) {
     myLibrary = [];
-    save();
   }
+  save();
   libraryDisplay();
 }
 
